@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Visitorlog adminhtml layout
+ * 
+ * @category   Aydus
+ * @package	   Aydus_Visitorlog
+ * @author     Aydus Consulting <davidt@aydus.com>
+ */
+--> 
+<layout>
+
+	<!-- Grid -->
+    <adminhtml_visitorlog_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>report/visitorlog</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="aydus_visitorlog/adminhtml_visitorlog" name="visitorlog" />
+        </reference>
+    </adminhtml_visitorlog_index>
+    <adminhtml_visitorlog_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aydus_visitorlog/adminhtml_visitorlog_grid" name="visitorlog_grid"/>
+        </block>
+    </adminhtml_visitorlog_grid>
+    
+    <!-- View -->
+    <adminhtml_visitorlog_view>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>report/visitorlog</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="aydus_visitorlog/adminhtml_visitorlog_view" name="visitorlog_view"></block>
+        </reference>
+        <reference name="left">
+            <block type="aydus_visitorlog/adminhtml_visitorlog_view_tabs" name="visitorlog_view_tabs">
+            	<!-- Visitor info -->
+                <block type="aydus_visitorlog/adminhtml_visitorlog_view_tab_detail" name="visitor_detail" template="aydus/visitorlog/view/tab/detail.phtml" />
+                <action method="addTab"><name>visitor_detail</name><block>visitor_detail</block></action>
+                <!-- Visitor urls tab create programmatically in Aydus_Visitorlog_Block_Adminhtml_Visitorlog_View_Tabs -->
+            </block>        
+        </reference>
+    </adminhtml_visitorlog_view>
+    
+    <!-- View - Urls grid -->
+    <adminhtml_visitorlog_urls>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aydus_visitorlog/adminhtml_visitorlog_view_tab_url" name="visitorlog_view_tab_url"></block>
+        </block>
+    </adminhtml_visitorlog_urls>
+    
+    <!-- Geoip -->
+    <adminhtml_geoip_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>report/visitorlog</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="aydus_visitorlog/adminhtml_geoip" template="report/grid/container.phtml" name="visitorlog.geoip.container">
+                <block type="aydus_visitorlog/adminhtml_geoip_form" name="grid.filter.form">
+                </block>
+            </block>            
+        </reference>
+	</adminhtml_geoip_index>    
+    
+</layout>

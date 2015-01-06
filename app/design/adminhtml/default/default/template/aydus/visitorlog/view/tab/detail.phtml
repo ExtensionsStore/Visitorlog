@@ -1,0 +1,136 @@
+<?php
+
+/**
+ * 
+ *
+ * @category   Aydus
+ * @package	   Aydus_Visitorlog
+ * @author     Aydus Consulting <davidt@aydus.com>
+ */
+
+$visitor = $this->getVisitor();
+?>
+<div class="entry-edit">
+    <div class="entry-edit-head"><h4 class="icon-head "><?php echo $this->__('Visitor Details') ?></h4></div>
+    <fieldset>
+        <table cellspacing="2">
+            <tr>
+                <td><strong><?php echo $this->__('Store:') ?></strong></td>
+                <td><?php echo $this->getStore()->getGroupId() ?></td>
+            </tr>
+            <tr>
+                <td><strong><?php echo $this->__('Store View:') ?></strong></td>
+                <td><?php echo $this->getStore()->getName() ?></td>
+            </tr>
+            <tr>
+                <td><strong><?php echo $this->__('First Visit At:') ?></strong></td>
+                <td><?php echo $visitor->getFirstVisitAt() ?></td>
+            </tr>
+        	<tr>
+                <td><strong><?php echo $this->__('Last Visit At:') ?></strong></td>
+                <td><?php echo $visitor->getLastVisitAt() ?></td>
+            </tr>
+            <tr>
+                <td><strong><?php echo $this->__('Session Id:') ?></strong></td>
+                <td><?php echo $visitor->getSessionId() ?></td>
+            </tr>
+            <tr>
+                <td><strong><?php echo $this->__('Server Address:') ?></strong></td>
+                <td><?php echo long2ip($visitor->getServerAddr()) ?></td>
+            </tr>
+            <tr>
+                <td><strong><?php echo $this->__('IP Address:') ?></strong></td>
+                <td><?php echo long2ip($visitor->getRemoteAddr()) ?></td>
+            </tr>
+            <tr>
+                <td><strong><?php echo $this->__('User Agent:') ?></strong></td>
+                <td><?php echo $visitor->getHttpUserAgent() ?></td>
+            </tr>
+            <tr>
+                <td><strong><?php echo $this->__('Accept Language:') ?></strong></td>
+                <td><?php echo $visitor->getHttpAcceptLanguage() ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Referer:') ?></strong></td>
+                <td><?php echo $visitor->getHttpReferer() ?></td>
+            </tr>            
+        </table>
+    </fieldset>
+    
+    <?php if ($visitor->getCustomerId()): ?>
+    <div class="entry-edit-head"><h4 class="icon-head "><?php echo $this->__('Customer Details') ?></h4></div>
+    <fieldset>
+        <table cellspacing="2">
+            <tr>
+                <td><strong><?php echo $this->__('Customer:') ?></strong></td>
+                <td><?php echo $visitor->getCustomerName() ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Email:') ?></strong></td>
+                <td><?php echo $visitor->getCustomerEmail() ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Logged in at:') ?></strong></td>
+                <td><?php echo $visitor->getLoginAt() ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Logged out at:') ?></strong></td>
+                <td><?php echo $visitor->getLogoutAt() ?></td>
+            </tr>            
+        </table>
+    </fieldset>    
+    <?php endif; ?>
+    
+    <?php if ($record = $this->getRecord()): ?>
+    <div class="entry-edit-head"><h4 class="icon-head "><?php echo $this->__('Geo Location') ?></h4></div>
+    <fieldset>
+        <table cellspacing="2">
+            <tr>
+                <td><strong><?php echo $this->__('Country Code:') ?></strong></td>
+                <td><?php echo $record->country_code ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Country Code 3:') ?></strong></td>
+                <td><?php echo $record->country_code3 ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Country Name:') ?></strong></td>
+                <td><?php echo $record->country_name ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('State/Province/Region:') ?></strong></td>
+                <td><?php echo $record->region ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('City:') ?></strong></td>
+                <td><?php echo $record->city ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Postal Code:') ?></strong></td>
+                <td><?php echo $record->postal_code ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Latitude:') ?></strong></td>
+                <td><?php echo $record->latitude ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Longitude:') ?></strong></td>
+                <td><?php echo $record->longitude ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Area Code:') ?></strong></td>
+                <td><?php echo $record->area_code ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Designated Market Area:') ?></strong></td>
+                <td><?php echo $record->dma_code ?></td>
+            </tr>            
+            <tr>
+                <td><strong><?php echo $this->__('Metro Code:') ?></strong></td>
+                <td><?php echo $record->metro_code ?></td>
+            </tr>            
+        </table>
+    </fieldset>    
+    <?php endif; ?>    
+    
+</div>

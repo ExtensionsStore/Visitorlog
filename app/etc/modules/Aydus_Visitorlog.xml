@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Visitorlog module
+ *
+ * @category   Aydus
+ * @package    Aydus_Visitorlog
+ * @author     Aydus Consulting <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_Visitorlog>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Aydus_Visitorlog>        
+    </modules>
+</config>

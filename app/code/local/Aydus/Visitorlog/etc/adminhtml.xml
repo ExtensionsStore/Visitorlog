@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Visitorlog admin menu and acl
+ *
+ * @category   Aydus
+ * @package	   Aydus_Visitorlog
+ * @author     Aydus Consulting <davidt@aydus.com>
+ */
+-->
+<config>
+    <menu>
+        <report>
+            <children>
+                <aydus_visitorlog translate="title" module="aydus_visitorlog">
+                    <title>Visitors Log</title>
+                    <sort_order>80</sort_order>
+                    <action>adminhtml/visitorlog</action>
+                    <children>
+                        <visitors translate="title" module="aydus_visitorlog">
+                            <title>Visitors</title>
+                    		<action>adminhtml/visitorlog</action>
+                        </visitors>
+                        <geoip translate="title" module="aydus_visitorlog">
+                            <title>Geo IP Lookup</title>
+                    		<action>adminhtml/geoip</action>
+                        </geoip>
+                    </children>
+                </aydus_visitorlog>
+            </children>
+        </report>
+    </menu>
+	<acl />
+</config>

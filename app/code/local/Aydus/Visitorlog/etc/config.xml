@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Visitorlog module config
+ *
+ * @category   Aydus
+ * @package	   Aydus_Visitorlog
+ * @author     Aydus Consulting <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_Visitorlog>
+            <version>1.0.0</version>
+        </Aydus_Visitorlog>
+    </modules>
+	<admin>
+	    <routers>
+	        <adminhtml>
+	            <args>
+	                <modules>
+	                    <Aydus_Visitorlog before="Mage_Adminhtml">Aydus_Visitorlog_Adminhtml</Aydus_Visitorlog>
+	                </modules>
+	            </args>
+	        </adminhtml>
+	    </routers>
+	</admin>    
+    <adminhtml>
+        <layout>
+            <updates>
+                <aydus_visitorlog>
+                    <file>aydus/visitorlog.xml</file>
+                </aydus_visitorlog>
+            </updates>
+        </layout>
+    </adminhtml>	
+    <global>
+        <helpers>
+            <aydus_visitorlog>
+                <class>Aydus_Visitorlog_Helper</class>
+            </aydus_visitorlog>
+        </helpers>
+        <blocks>
+            <aydus_visitorlog>
+                <class>Aydus_Visitorlog_Block</class>
+            </aydus_visitorlog>
+        </blocks>
+        <models>
+            <aydus_visitorlog>
+                <class>Aydus_Visitorlog_Model</class>
+            </aydus_visitorlog>
+            <log_resource>
+                <rewrite>
+                    <visitor>Aydus_Visitorlog_Model_Log_Resource_Visitor</visitor>
+                </rewrite>
+            </log_resource>
+        </models>
+    </global>        
+</config>

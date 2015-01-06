@@ -1,0 +1,6 @@
+app/code/local/Aydus/Visitorlog                                     app/code/local/Aydus/Visitorlog/
+app/design/adminhtml/default/default/layout/aydus/visitorlog.xml    app/design/adminhtml/default/default/layout/aydus/
+app/design/adminhtml/default/default/template/aydus/visitorlog      app/design/adminhtml/default/default/template/aydus/visitorlog/
+app/etc/modules/Aydus_Visitorlog.xml                                app/etc/modules/
+
+@shell rm -rf $PROJECT/var/cache/*
