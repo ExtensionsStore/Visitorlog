@@ -55,5 +55,21 @@
                 </rewrite>
             </log_resource>
         </models>
-    </global>        
+    </global>    
+    <default>
+        <system>
+            <log>
+                <backup_before>1</backup_before>
+            </log>
+        </system>
+    </default>    
+    <crontab>
+        <jobs>
+            <log_backup>
+                <run>
+                    <model>visitorlog/cron::logBackup</model>
+                </run>
+            </log_backup>
+        </jobs>
+    </crontab>                     
 </config>

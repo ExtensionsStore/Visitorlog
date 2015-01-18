@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Visitorlog system config
+ *
+ * @category   Aydus
+ * @package	   Aydus_Visitorlog
+ * @author     Aydus Consulting <davidt@aydus.com>
+ */
+-->
+<config>
+    <sections>
+        <system>
+            <groups>
+                <log translate="label" module="aydus_visitorlog">
+                    <fields>
+                        <backup translate="label">
+                            <label>Backup Logs</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <backend_model>aydus_visitorlog/system_config_backend_log_backup</backend_model>                            
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </backup>
+                        <backup_before translate="label">
+                            <label>Backup Hours Before</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Number of hours before scheduled log cleaning to run backup.]]></comment>                            
+                        </backup_before>                        
+                    </fields>
+                </log>
+            </groups>
+        </system>
+    </sections>
+</config>

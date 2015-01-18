@@ -30,7 +30,7 @@ class Aydus_Visitorlog_Block_Adminhtml_Visitorlog_View_Tab_Detail
 		$visitor = $this->getVisitor();
 		$ip = long2ip($visitor->getRemoteAddr());
 		
-		$record = $this->helper('aydus_visitorlog')->getRecord($ip);
+		$record = $this->helper('aydus_visitorlog/geoip')->getRecord($ip);
 		
 		return $record;
 	}

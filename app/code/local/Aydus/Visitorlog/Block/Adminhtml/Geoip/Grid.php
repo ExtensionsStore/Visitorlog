@@ -42,7 +42,7 @@ class Aydus_Visitorlog_Block_Adminhtml_Geoip_Grid extends Mage_Adminhtml_Block_W
 				
 				if (preg_match('/^(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))$/', $ipAddress)){
 					
-					$record = $this->helper('aydus_visitorlog')->getRecord($ipAddress);
+					$record = $this->helper('aydus_visitorlog/geoip')->getRecord($ipAddress);
 					
 					$row = (array)$record;
 						
