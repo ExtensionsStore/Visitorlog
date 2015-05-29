@@ -4,8 +4,8 @@
  * Visitorlog module config
  *
  * @category   Aydus
- * @package	   Aydus_Visitorlog
- * @author     Aydus Consulting <davidt@aydus.com>
+ * @package    Aydus_Visitorlog
+ * @author     Aydus <davidt@aydus.com>
  */
 -->
 <config>
@@ -14,17 +14,17 @@
             <version>1.0.0</version>
         </Aydus_Visitorlog>
     </modules>
-	<admin>
-	    <routers>
-	        <adminhtml>
-	            <args>
-	                <modules>
-	                    <Aydus_Visitorlog before="Mage_Adminhtml">Aydus_Visitorlog_Adminhtml</Aydus_Visitorlog>
-	                </modules>
-	            </args>
-	        </adminhtml>
-	    </routers>
-	</admin>    
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Aydus_Visitorlog before="Mage_Adminhtml">Aydus_Visitorlog_Adminhtml</Aydus_Visitorlog>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>    
     <adminhtml>
         <layout>
             <updates>
@@ -40,12 +40,12 @@
                 <class>Aydus_Visitorlog_Helper</class>
             </aydus_visitorlog>
         </helpers>
-        <blocks>
+                <blocks>
             <aydus_visitorlog>
                 <class>Aydus_Visitorlog_Block</class>
             </aydus_visitorlog>
-        </blocks>
-        <models>
+                    </blocks>
+                <models>
             <aydus_visitorlog>
                 <class>Aydus_Visitorlog_Model</class>
             </aydus_visitorlog>
@@ -54,7 +54,7 @@
                     <visitor>Aydus_Visitorlog_Model_Log_Resource_Visitor</visitor>
                 </rewrite>
             </log_resource>
-        </models>
+                    </models>
     </global>    
     <default>
         <system>

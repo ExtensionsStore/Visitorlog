@@ -4,13 +4,13 @@
  * Visitorlog adminhtml layout
  * 
  * @category   Aydus
- * @package	   Aydus_Visitorlog
- * @author     Aydus Consulting <davidt@aydus.com>
+ * @package    Aydus_Visitorlog
+ * @author     Aydus <davidt@aydus.com>
  */
 --> 
 <layout>
 
-	<!-- Grid -->
+    <!-- Grid -->
     <adminhtml_visitorlog_index>
         <reference name="menu">
             <action method="setActive">
@@ -39,9 +39,12 @@
         </reference>
         <reference name="left">
             <block type="aydus_visitorlog/adminhtml_visitorlog_view_tabs" name="visitorlog_view_tabs">
-            	<!-- Visitor info -->
+                <!-- Visitor info -->
                 <block type="aydus_visitorlog/adminhtml_visitorlog_view_tab_detail" name="visitor_detail" template="aydus/visitorlog/view/tab/detail.phtml" />
-                <action method="addTab"><name>visitor_detail</name><block>visitor_detail</block></action>
+                <action method="addTab">
+                    <name>visitor_detail</name>
+                    <block>visitor_detail</block>
+                </action>
                 <!-- Visitor urls tab create programmatically in Aydus_Visitorlog_Block_Adminhtml_Visitorlog_View_Tabs -->
             </block>        
         </reference>
@@ -67,6 +70,6 @@
                 </block>
             </block>            
         </reference>
-	</adminhtml_geoip_index>    
+    </adminhtml_geoip_index>    
     
 </layout>

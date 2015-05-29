@@ -4,8 +4,8 @@
  * Visitorlog admin menu and acl
  *
  * @category   Aydus
- * @package	   Aydus_Visitorlog
- * @author     Aydus Consulting <davidt@aydus.com>
+ * @package    Aydus_Visitorlog
+ * @author     Aydus <davidt@aydus.com>
  */
 -->
 <config>
@@ -19,16 +19,16 @@
                     <children>
                         <visitors translate="title" module="aydus_visitorlog">
                             <title>Visitors</title>
-                    		<action>adminhtml/visitorlog</action>
+                            <action>adminhtml/visitorlog</action>
                         </visitors>
                         <geoip translate="title" module="aydus_visitorlog">
                             <title>Geo IP Lookup</title>
-                    		<action>adminhtml/geoip</action>
+                            <action>adminhtml/geoip</action>
                         </geoip>
                     </children>
                 </aydus_visitorlog>
             </children>
         </report>
     </menu>
-	<acl />
+    <acl />
 </config>

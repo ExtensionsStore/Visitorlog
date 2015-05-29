@@ -3,21 +3,18 @@
 /**
  * Adminhtml customer edit form block
  *
- * @category   Mage
- * @package    Mage_Adminhtml
- * @author      Magento Core Team <core@magentocommerce.com>
+ * @category   Aydus
+ * @package    Aydus_Visitorlog
+ * @author     Aydus <davidt@aydus.com>
  */
+class Aydus_Visitorlog_Block_Adminhtml_Visitorlog_View_Form extends Mage_Adminhtml_Block_Widget_Form {
 
-class Aydus_Visitorlog_Block_Adminhtml_Visitorlog_View_Form extends Mage_Adminhtml_Block_Widget_Form
-{
-
-    protected function _prepareForm()
-    {
+    protected function _prepareForm() {
         $form = new Varien_Data_Form(array(
-            'id'        => 'edit_form',
-            'action'    => $this->getData('action'),
-            'method'    => 'post',
-            'enctype'   => 'multipart/form-data'
+            'id' => 'edit_form',
+            'action' => $this->getData('action'),
+            'method' => 'post',
+            'enctype' => 'multipart/form-data'
         ));
 
         $visitor = Mage::registry('current_visitor');
@@ -33,4 +30,5 @@ class Aydus_Visitorlog_Block_Adminhtml_Visitorlog_View_Form extends Mage_Adminht
         $this->setForm($form);
         return parent::_prepareForm();
     }
+
 }

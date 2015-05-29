@@ -4,8 +4,8 @@
  * Visitorlog details tab
  *
  * @category   Aydus
- * @package	   Aydus_Visitorlog
- * @author     Aydus Consulting <davidt@aydus.com>
+ * @package    Aydus_Visitorlog
+ * @author     Aydus <davidt@aydus.com>
  */
 
 class Aydus_Visitorlog_Block_Adminhtml_Visitorlog_View_Tab_Detail 

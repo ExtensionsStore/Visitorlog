@@ -4,9 +4,10 @@
  * Aydus Visitorlog admin block
  *
  * @category   Aydus
- * @package	   Aydus_Visitorlog
- * @author     Aydus Consulting <davidt@aydus.com>
+ * @package    Aydus_Visitorlog
+ * @author     Aydus <davidt@aydus.com>
  */
+
 class Aydus_Visitorlog_Block_Adminhtml_Visitorlog extends Mage_Adminhtml_Block_Widget_Grid_Container 
 {
 
