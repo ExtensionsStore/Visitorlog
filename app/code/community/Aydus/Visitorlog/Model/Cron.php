@@ -127,9 +127,14 @@ class Aydus_Visitorlog_Model_Cron {
 		WHERE t.constraint_type='PRIMARY KEY'
 		        AND t.table_schema=DATABASE()
 		        AND t.table_name='$tableName';");
-
+            
             foreach ($rows as $row) {
 
+                if (!$primary){
+                    reset($row);
+                    $primary = key($row);
+                }
+                
                 $id = $row[$primary];
 
                 $this->_write->query("DELETE FROM $tableName WHERE $primary = $id");
