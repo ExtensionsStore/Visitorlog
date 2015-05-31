@@ -1,0 +1,53 @@
+config:
+  default/system/log/enabled: 1
+  default/system/log/backup: 1
+tables:
+  log/customer:
+    - log_id: 1
+      visitor_id: 1
+      customer_id: 1
+      login_at: 2015-05-30 12:00:00
+      logout_at: 2015-05-30 12:00:00
+      store_id: 1
+  log/quote_table:
+    - quote_id: 1
+      visitor_id: 1
+      created_at: 2015-05-30 12:00:00
+  log/summary_table:
+    - summary_id: 1
+      store_id: 1
+      type_id: 1
+      visitor_count: 1
+      customer_count: 1
+      add_date: 2015-05-30 12:00:00
+  log/url_table:
+    - url_id: 1
+      visitor_id: 1
+      visit_time: 2015-05-30 12:00:00
+  log/url_info_table:
+    - url_id: 1
+      url: http://www.example.com/index.php
+      referer: 
+  log/visitor:
+    - visitor_id: 1
+      session_id: 5bqh96bgpojgk6mbbltn2h6ge5
+      first_visit_at: 2015-05-30 12:00:00
+      last_visit_at: 2015-05-30 12:00:00
+      last_url_id: 1
+      store_id: 1
+  log/visitor_info:
+    - visitor_id: 1
+      http_referer: 
+      http_user_agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36
+      http_accept_charset: 
+      http_accept_language: en-US,en;q=0.8,fr;q=0.6
+      server_addr: 2130706433
+      remote_addr: 2130706433
+  log/visitor_online:      
+    - visitor_id: 1
+      visitor_type: c
+      remote_addr: 1255470050
+      first_visit_at: 2015-05-30 12:00:00
+      last_visit_at: 2015-05-30 12:00:00
+      customer_id: 1
+      last_url: http://www.example.com/index.php

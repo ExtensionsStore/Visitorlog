@@ -1,0 +1,32 @@
+tables:
+  admin/user:
+    - user_id: 1
+      firstname: David
+      lastname: Tay
+      username: davidt@aydus.com
+      email: davidt@aydus.com
+  admin/role:
+    - role_id: 1
+      parent_id: 0
+      tree_level: 1
+      sort_order: 1
+      role_type: G
+      user_id: 0
+      role_name: Administrators
+    - role_id: 2
+      parent_id: 1
+      tree_level: 2
+      sort_order: 0
+      role_type: U
+      user_id: 1
+      role_name: David
+      gws_is_all: 1        
+  admin/rule:
+    - rule_id: 1
+      role_id: 1
+      resource_id: all
+      assert_id: 0
+      role_type: G
+      permission: allow  
+  log/visitor:
+    - visitor_id: 1
