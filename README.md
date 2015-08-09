@@ -15,7 +15,15 @@ How to use
 Upload extension files to your Magento root. Access the Visitor Log in the 
 admin, under Reports -> Visitors Log:
 
-<img src="md/menu.png" />
+<img src="md/grid.png" />
+
+Click on a log entry to view details:
+
+<img src="md/details.png" />
+
+Click on the Urls tab to view the pages the visitor browsed:
+
+<img src="md/urls.png" />
 
 To enable automated backup of your logs, go to System -> Configuration -> 
 Advanced -> System -> Log Cleaning and set Backup Logs to Yes:
